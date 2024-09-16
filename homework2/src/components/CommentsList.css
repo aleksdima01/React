@@ -1,0 +1,8 @@
+.comments_all {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: rgb(0, 47, 255);
+    gap: 30px;
+
+}
