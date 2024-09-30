@@ -1,31 +1,48 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
+import './temperatureConverter.css'
+import PropTypes from 'prop-types';
+
 const TemperatureConverter = () => {
-    const [temperatureCelsius, setTemperatureCelsius] = useState();
-    const [temperatureFareng, setTemperatureFareng] = useState();
+    const [temperatureCelsius, setTemperatureCelsius] = useState('');
+    const [temperatureFareng, setTemperatureFareng] = useState('');
+    const [displayResult, setDisplayResult] = useState(false);
 
 
     const conversionToFareng = (e) => {
-        e.preventDefault();
-        setTemperatureFareng(temperatureFareng => e.target.value * 1.8 + 32);
+        setTemperatureCelsius(e.target.value)
+        setTemperatureFareng((e.target.value * 1.8 + 32).toFixed(3));
     }
     const conversionToCelsius = (e) => {
-
-        setTemperatureCelsius(temperatureCelsius => (e.target.value - 32) / 1.8);
+        setTemperatureFareng(e.target.value)
+        setTemperatureCelsius(((e.target.value - 32) / 1.8).toFixed(3));
 
     }
+    const showResult = () => {
+        setDisplayResult(displayResult ? false : true)
+    }
+
 
     return (
         <div>
-            <TextField onChange={(e) => setTemperatureFareng(e.target.value)}
-                onPointerCancel={(e) => setTemperatureFareng(0)} value={temperatureCelsius} style={{ margin: "20px" }} id="outlined-basic" label="Цельсий" variant="outlined" />
-            <TextField onChange={(e) => setTemperatureCelsius(e.target.value)} value={temperatureFareng} style={{ margin: "20px" }} id="outlined-basic" label="Фаренгейт" variant="outlined" />
+            <TextField onChange={conversionToFareng}
+                value={temperatureCelsius} style={{ margin: "20px" }} id="outlined-basic" label="Цельсий" variant="outlined" />
+            <TextField onChange={conversionToCelsius} value={temperatureFareng} style={{ margin: "20px" }} id="outlined-basic" label="Фаренгейт" variant="outlined" />
             <div>
-                <Button style={{ margin: "20px" }} variant="outlined">Конвертировать</Button>
+                <Button onClick={showResult} style={{ margin: "20px" }} variant="outlined">Показать</Button>
+                <div className={displayResult ? 'active' : 'hidden'}>
+                    <p className='text'>Температура в Цельсиях: {temperatureCelsius}</p>
+                    <p className='text'>Температура в Фаренгейтах: {temperatureFareng}</p>
+                </div>
             </div>
         </div>
     )
 }
+
+TemperatureConverter.propTypes = {
+    temperatureCelsius: PropTypes.number,
+    temperatureFareng: PropTypes.number
+};
 
 export default TemperatureConverter

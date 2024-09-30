@@ -11,7 +11,7 @@ function CommentsList() {
     ]);
 
     const deleteComment = (id) => {
-        const newArray = [...comments].filter(el => el.id !== id);
+        const newArray = [...comments].filter(el => el !== id);
         console.log(newArray);
         setComments(newArray);
     }
