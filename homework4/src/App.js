@@ -9,8 +9,8 @@ import { Box } from "./components/Box/Box";
 import { List } from "./components/List/List";
 import { HomePage } from "./components/HomePage";
 import { AboutPage } from "./components/AboutPage";
-import Goods from "./components/List/Goods/Goods";
-import ConcreteGood from "./components/List/Goods/ConcreteGood";
+import Goods from "./components/Goods/Goods";
+import ConcreteGood from "./components/Goods/ConcreteGood";
 
 const arr = ["пункт 1", "пункт 2", "пункт 3"];
 const goods = [
@@ -36,17 +36,6 @@ const App = () => {
     const style = { borderBottom: `1px solid ${i % 2 ? "green" : "red"}` };
     return <article style={style}>{item}</article>;
   };
-
-  const routes = [
-    {
-      path: "/",
-      element: <HomePage />,
-    },
-    {
-      path: "/about",
-      element: <AboutPage />,
-    },
-  ];
 
   const styleActiveLink = ({ isActive }) => {
     return isActive ? `${s.link} ${s.active}` : s.link;
@@ -104,8 +93,6 @@ const App = () => {
           }
         />
       </Routes>
-      {/* ListPage  */}
-      {/* DetailPage */}
     </BrowserRouter>
   );
 };
