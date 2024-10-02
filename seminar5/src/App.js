@@ -1,34 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import { UserContext } from './contexts/UserContext';
 import { ThemeProvider } from './contexts/ThemeContext';
-import Footer from './components/Footer';
+import MainWithLoading from './components/Main';
+import { useEffect } from 'react';
+import { Provider } from 'react-redux';
+import { store } from './components/Store/store';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [username, setUsername] = useState("гость");
-  const [theme, setTheme] = useState("светлая");
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+      setData("Привет");
+    }, 2000);
+  }, [setIsLoading])
   return (
-    <>
-      <UserContext.Provider value={{ username, setUsername }}>
-        <header>
-          <Header />
-        </header>
-        <main className=''>
-          <button onClick={() => setUsername(prompt("Напишите имя", "Макс"))}>Сменить имя</button>
-          <button onClick={setTheme}>
-            сменить тему
-          </button>
-        </main>
-      </UserContext.Provider >
+
+    <Provider store={store}>
       <ThemeProvider>
-        <footer className='light'>
-          {/* <Footer /> */}
-        </footer>
+        <UserContext.Provider value={{ username, setUsername }}>
+          <Header />
+          <MainWithLoading isLoading={isLoading} data={data} />
+        </UserContext.Provider >
+        <Footer />
       </ThemeProvider>
-    </>
+    </Provider>
+
   );
-}
+};
 
 export default App;
