@@ -38,12 +38,12 @@
   }
 }
 
-.light {
-  background-color: aliceblue;
+.blue {
+  background-color: rgb(13, 184, 210);
   color: black;
 }
 
-.dark {
-  background-color: black;
+.green {
+  background-color: rgb(26, 190, 43);
   color: aliceblue;
 }
