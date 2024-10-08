@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { updateProduct } from '../store/productSlice';
 
@@ -12,7 +12,11 @@ const ModifyProduct = ({ id }) => {
     const [description, setDescription] = useState(products[index].description);
     const [price, setPrice] = useState(products[index].price);
     const [available, setAvailable] = useState(products[index].available);
-    const [showModify, setShowModify] = useState(false);
+    const [showModify] = useState(false);
+
+    useEffect(() => {
+        setAvailable(products[index].available)
+    }, [products, index])
 
     const dispatch = useDispatch();
 
@@ -26,7 +30,8 @@ const ModifyProduct = ({ id }) => {
         <div>
             {(products[index].showModify === false) ? (
                 <></>
-            ) : (
+            ) : (<>
+                <h2 style={{ color: "#999" }}>Modify product</h2>
                 <form onSubmit={handleSubmit} >
                     <input
                         type="text"
@@ -58,7 +63,7 @@ const ModifyProduct = ({ id }) => {
                         />
                     </label>
                     <button type="submit">Modify</button>
-                </form>)}
+                </form></>)}
         </div>
 
     );

@@ -1,16 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
-import { deleteProduct, toggleAvailability, toggleShowModify, updateProduct } from "../store/productSlice";
+import { deleteProduct, toggleAvailability, toggleShowModify } from "../store/productSlice";
 import ModifyProduct from "./modifyProduct";
-import { useState } from "react";
+
 
 const ProductList = () => {
   const { products } = useSelector((state) => state.products);
-  // console.log("products: ", products);
   const dispatch = useDispatch();
-  const [display, setDisplay] = useState(false);
-  // const displayHandler = () => {
-  //   setDisplay(!display);
-  // }
 
   return (
     <div>
@@ -39,7 +34,6 @@ const ProductList = () => {
               </li>
             ))}
           </ul>
-
         </>
       )
       }

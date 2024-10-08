@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const initialState = {
   products: JSON.parse(localStorage.getItem("product-Catalog") || "[]"),
 };

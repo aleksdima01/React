@@ -7,7 +7,7 @@ const AddProduct = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [available, setAvailable] = useState(true);
-  const [showModify, setShowModify] = useState(false);
+  const [showModify] = useState(false);
 
   const dispatch = useDispatch();
 
