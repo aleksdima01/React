@@ -1,22 +1,27 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
+import { fetchUsersFailure, fetchUsersRequest, fetchUsersSuccess } from '../store/userReducer';
 
-function fetchUsersApi() {
-    return fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json());
+async function fetchUsersApi() {
+
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    if (!response.ok) {
+        throw new Error("Something go wrong")
+    }
+    return await response.json();
 }
 
 function* fetchUsers() {
     try {
         const data = yield call(fetchUsersApi);
-        yield put({ type: "FETCH_USERS_SUCCESS", payload: data })
+        yield put(fetchUsersSuccess(data))
     } catch (error) {
-        yield put({ type: "FETCH_USERS_FAILURE", payload: error.message || "Что-то пошло не так" })
+        yield put(fetchUsersFailure(error.message))
 
     }
 }
 
 function* usersSaga() {
-    yield takeEvery('FETCH_USERS_REQUEST', fetchUsers);
+    yield takeEvery(fetchUsersRequest.type, fetchUsers);
 }
 
 export default usersSaga;
