@@ -47,6 +47,7 @@ const productSlice = createSlice({
       const product = state.products.find(
         (product) => product.id === action.payload,
       );
+      console.log(state.products)
       if (product) {
         product.showModify = !product.showModify;
         saveToLocalStorage(state.products);
