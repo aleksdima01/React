@@ -30,7 +30,6 @@ function App() {
               <li className="li_hover" key={user.id} onClick={(e) => handleShowInfo(user.id)} >{user.name}</li>
             </>
           ))
-
         }
         <ShowUserInfo />
       </ul> : null
