@@ -5,17 +5,17 @@ import './temperatureConverter.css'
 import PropTypes from 'prop-types';
 
 const TemperatureConverter = () => {
-    const [temperatureCelsius, setTemperatureCelsius] = useState('');
-    const [temperatureFareng, setTemperatureFareng] = useState('');
+    const [temperatureCelsius, setTemperatureCelsius] = useState("");
+    const [temperatureFareng, setTemperatureFareng] = useState("");
     const [displayResult, setDisplayResult] = useState(false);
 
 
     const conversionToFareng = (e) => {
-        setTemperatureCelsius(e.target.value)
+        setTemperatureCelsius(parseFloat(e.target.value))
         setTemperatureFareng((e.target.value * 1.8 + 32).toFixed(3));
     }
     const conversionToCelsius = (e) => {
-        setTemperatureFareng(e.target.value)
+        setTemperatureFareng(parseFloat(e.target.value))
         setTemperatureCelsius(((e.target.value - 32) / 1.8).toFixed(3));
 
     }
@@ -27,8 +27,12 @@ const TemperatureConverter = () => {
     return (
         <div>
             <TextField onChange={conversionToFareng}
-                value={temperatureCelsius} style={{ margin: "20px" }} id="outlined-basic" label="Цельсий" variant="outlined" />
-            <TextField onChange={conversionToCelsius} value={temperatureFareng} style={{ margin: "20px" }} id="outlined-basic" label="Фаренгейт" variant="outlined" />
+                value={temperatureCelsius} style={{ margin: "20px" }}
+                type='number'
+                id="outlined-basic" label="Цельсий" variant="outlined" />
+            <TextField onChange={conversionToCelsius} value={temperatureFareng}
+                type='number'
+                style={{ margin: "20px" }} id="outlined-basic" label="Фаренгейт" variant="outlined" />
             <div>
                 <Button onClick={showResult} style={{ margin: "20px" }} variant="outlined">Показать</Button>
                 <div className={displayResult ? 'active' : 'hidden'}>
