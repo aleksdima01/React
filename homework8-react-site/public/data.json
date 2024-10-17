@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "image": "/img/1-card.png",
+        "name": "Jumper",
+        "price": 52,
+        "size": "m"
+    },
+    {
+        "id": 2,
+        "image": "/img/2.png",
+        "name": "T-shirt",
+        "price": 56,
+        "size": "xxl"
+    },
+    {
+        "id": 3,
+        "image": "/img/3-card.png",
+        "name": "Windbreaker",
+        "price": 68,
+        "size": "l"
+    },
+    {
+        "id": 4,
+        "image": "/img/4.png",
+        "name": "Shirt",
+        "price": 73,
+        "size": "xl"
+    },
+    {
+        "id": 5,
+        "image": "/img/5-card.png",
+        "name": "Jacket",
+        "price": 43,
+        "size": "xxs"
+    },
+    {
+        "id": 6,
+        "image": "/img/6-card.png",
+        "name": "Windbreaker",
+        "price": 70,
+        "size": "xs"
+    },
+    {
+        "id": 7,
+        "image": "/img/7-card.png",
+        "name": "Shirt",
+        "price": 36,
+        "size": "s"
+    },
+    {
+        "id": 8,
+        "image": "/img/5.png",
+        "name": "Jacket",
+        "price": 39,
+        "size": "m"
+    },
+    {
+        "id": 9,
+        "image": "/img/9-card.png",
+        "name": "Windbreaker",
+        "price": 64,
+        "size": "l"
+    },
+    {
+        "id": 10,
+        "image": "/img/4-card.png",
+        "name": "Shirt",
+        "price": 73,
+        "size": "xl"
+    },
+    {
+        "id": 11,
+        "image": "/img/2-card.png",
+        "name": "Jacket",
+        "price": 56,
+        "size": "xxl"
+    }
+]

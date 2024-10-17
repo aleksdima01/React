@@ -16,7 +16,7 @@ $site-width: 1600px;
     padding: 0;
     margin: 0;
     text-decoration: none;
-    color: #fff;
+
 }
 
 body {
@@ -251,7 +251,6 @@ input[type="checkbox"]:checked~.top-menu__box {
 
         &__mega-box {
             width: 262px;
-            height: 415px;
             padding: 17px;
             background-color: #ffffff;
             border-radius: 5px;
@@ -392,10 +391,6 @@ input[type="checkbox"]:checked~.top-menu__box {
 
 }
 
-.right-header-block a:hover path {
-    fill: #ef5b70;
-
-}
 
 .header_bottom {
     width: $site-width;
