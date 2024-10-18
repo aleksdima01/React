@@ -29,8 +29,8 @@ const cartSlice = createSlice({
             const products = state.cart.filter(
                 (product) => product.id !== action.payload.id,
             );
-            // saveToLocalStorage(products);
             state.cart = products;
+            saveToLocalStorage(state.cart);
         },
     },
 });

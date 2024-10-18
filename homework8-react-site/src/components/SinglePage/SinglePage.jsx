@@ -5,10 +5,10 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { ReactComponent as Cart } from "../../svg/cart.svg"
 import { ReactComponent as SubscrInfo } from "../../svg/subscr_info.svg"
-import { Link } from 'react-router-dom'
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import MainProducts from '../MainProducts/MainProducts'
+import { Link } from 'react-router-dom'
 
 const SinglePage = () => {
     return (
@@ -17,9 +17,9 @@ const SinglePage = () => {
             <nav className="new-arrivals">
                 <a href="#" className="new-arrivals__link">New Arrivals</a>
                 <ul className="ul-refs">
-                    <li className="ul-refs__li"><a className="ul-refs__a" href="../homework1/index.html">home</a></li>
-                    <li className="ul-refs__li"><a className="ul-refs__a" href="../homework3/product.html">man</a></li>
-                    <li className="ul-refs__li"><a className="ul-refs__a" href="../homework3/product.html">New Arrivals</a></li>
+                    <li className="ul-refs__li"><Link to={"/"} className="ul-refs__a">home</Link></li>
+                    <li className="ul-refs__li"><Link to={"/products"} className="ul-refs__a">man</Link></li>
+                    <li className="ul-refs__li"><Link to={"/products"} className="ul-refs__a">New Arrivals</Link></li>
                 </ul>
             </nav>
             <div className="big-center-photo">
@@ -71,10 +71,8 @@ const SinglePage = () => {
                 <section>
                     <div className="cards-section-single">
                         <h3 className="item-title">you may like also</h3>
-                        {/* <div className="item-box"> */}
                         <div className="products">
                             <MainProducts count={4} />
-
                         </div>
                     </div>
                 </section>

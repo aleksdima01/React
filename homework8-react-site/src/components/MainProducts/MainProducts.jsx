@@ -8,7 +8,6 @@ const MainProducts = ({ count }) => {
     const { productsList, loading } = useSelector((state) => state.products);
     let randomArray = [];
     if (count > 0) {
-
         while (randomArray.length < count) {
             const random = Math.floor(Math.random() * productsList.length);
             if (!randomArray.includes(productsList[random])) {
@@ -17,7 +16,6 @@ const MainProducts = ({ count }) => {
         }
     }
 
-    console.log(randomArray);
     if (count === undefined) {
         return (<>
             {productsList.map(product =>

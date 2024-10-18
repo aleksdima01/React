@@ -15,9 +15,9 @@ const Cart = () => {
             <nav className="new-arrivals">
                 <a href="#" className="new-arrivals__link">New Arrivals</a>
                 <ul className="ul-refs">
-                    <li className="ul-refs__li"><a className="ul-refs__a" href="../homework1/index.html">home</a></li>
-                    <li className="ul-refs__li"><a className="ul-refs__a" href="../homework3/product.html">man</a></li>
-                    <li className="ul-refs__li"><a className="ul-refs__a" href="../homework3/product.html">New Arrivals</a></li>
+                    <li className="ul-refs__li"><Link to={"/"} className="ul-refs__a">home</Link></li>
+                    <li className="ul-refs__li"><Link to={"/products"} className="ul-refs__a">man</Link></li>
+                    <li className="ul-refs__li"><Link to={"/products"} className="ul-refs__a">New Arrivals</Link></li>
                 </ul>
             </nav>
             <section className="cart-products">
