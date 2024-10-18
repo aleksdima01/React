@@ -24,36 +24,14 @@ function App() {
 
   return (
     <BrowserRouter>
-      <nav>
-        <NavLink to="/">
-          Главная
-        </NavLink>
-        <NavLink to="/checkout">
-          Checkout
-        </NavLink>
-        <NavLink to="/single-page">
-          SinglePage
-        </NavLink>
-        <NavLink to="/products">
-          Products
-        </NavLink>
-        <NavLink to="/cart">
-          Cart
-        </NavLink>
-      </nav>
       <Routes>
         <Route exact path="/" element={<Main />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/single-page" element={<SinglePage />} />
         <Route path="/products" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
-        {/* <Route
-          path="/goods/:productId"
-          element={
-            <ConcreteGood goods={goods} />}/> */}
       </Routes>
     </BrowserRouter>
-
   );
 }
 

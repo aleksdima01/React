@@ -8,6 +8,7 @@ import { ReactComponent as SubscrInfo } from "../../svg/subscr_info.svg"
 import { Link } from 'react-router-dom'
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
+import MainProducts from '../MainProducts/MainProducts'
 
 const SinglePage = () => {
     return (
@@ -70,73 +71,9 @@ const SinglePage = () => {
                 <section>
                     <div className="cards-section-single">
                         <h3 className="item-title">you may like also</h3>
-                        <div className="item-box">
-                            <div className="item">
-                                <Link to={"/single-page"} className="item-link">
-                                    <div className="item-link__img">
-                                        <img className="item-img" src="img/cart1.png" alt="item" />
-                                    </div>
-                                    <div className="txt-box">
-                                        <p className="description">Mango People T-shirt</p>
-                                        <p className="item-price">$52.00</p>
-                                    </div>
-                                </Link>
-                                <div className="add-box">
-                                    <button type='button' className="add" >
-                                        <img src="img/cart-add.svg" alt="cart" className="cart" />
-                                        <p className="add-txt">Add to Cart</p>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className="item">
-                                <a href="./single-page.html" className="item-link">
-                                    <div className="item-link__img">
-                                        <img className="item-img" src="img/cart2.png" alt="item" />
-                                    </div>
-                                    <div className="txt-box">
-                                        <p className="description">Mango People T-shirt</p>
-                                        <p className="item-price">$52.00</p>
-                                    </div>
-                                </a>
-                                <div className="add-box">
-                                    <a href="222222" className="add">
-                                        <img src="img/cart-add.svg" alt="cart" className="cart" />
-                                        <p className="add-txt">Add to Cart</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="item">
-                                <a href="./single-page.html" className="item-link">
-                                    <div className="item-link__img">
-                                        <img className="item-img" src="img/cart3.png" alt="item" />
-                                    </div>
-                                    <div className="txt-box">
-                                        <p className="description">Mango People T-shirt</p>
-                                        <p className="item-price">$52.00</p>
-                                    </div>
-                                </a>
-                                <div className="add-box">
-                                    <a href="222222" className="add">
-                                        <img src="img/cart-add.svg" alt="cart" className="cart" />
-                                        <p className="add-txt">Add to Cart</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="item">
-                                <a href="./single-page.html" className="item-link">
-                                    <img className="item-img item-img-4" src="img/cart4.png" alt="item" />
-                                    <div className="txt-box">
-                                        <p className="description">Mango People T-shirt</p>
-                                        <p className="item-price">$52.00</p>
-                                    </div>
-                                </a>
-                                <div className="add-box">
-                                    <a href="222222" className="add">
-                                        <img src="img/cart-add.svg" alt="cart" className="cart" />
-                                        <p className="add-txt">Add to Cart</p>
-                                    </a>
-                                </div>
-                            </div>
+                        {/* <div className="item-box"> */}
+                        <div className="products">
+                            <MainProducts count={4} />
 
                         </div>
                     </div>

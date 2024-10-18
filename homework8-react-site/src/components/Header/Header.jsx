@@ -21,10 +21,10 @@ const Header = () => {
                             <div className="top-menu">
                                 <ul className="top-menu__ul">
                                     <li className="top-menu__li">
-                                        <label for="psbtn1" className="top-menu__link">
+                                        <label for="psbtn245" className="top-menu__link">
                                             Browse<FontAwesomeIcon icon={faCaretDown} style={{ color: "#838383", marginLeft: "8px", fontSize: "14px" }} />
                                         </label>
-                                        <input type="checkbox" id="psbtn1" />
+                                        <input type="checkbox" id="psbtn245" />
                                         <div className="top-menu__box">
                                             <h3 className="top-menu__box__heading">Women</h3>
                                             <a href="#" className="top-menu__box__link">Dresses</a>

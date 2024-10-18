@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../Store/cartSlice';
+import { Link } from 'react-router-dom';
 
 const ProductsProducts = ({ checkboxes }) => {
     const { productsList, loading, error } = useSelector((state) => state.products);
@@ -15,7 +16,7 @@ const ProductsProducts = ({ checkboxes }) => {
                             Загрузка...
                         </div >) :
                         <div key={product.id} className="item">
-                            <a href="../homework2/single-page.html" className="item-link">
+                            <Link to={"/single-page"} className="item-link">
                                 <div className="item-link__img">
                                     <img className="item-img" src={product.image} alt="item" />
                                 </div>
@@ -23,7 +24,7 @@ const ProductsProducts = ({ checkboxes }) => {
                                     <p className="description">{product.name}</p>
                                     <p className="item-price">${product.price}</p>
                                 </div>
-                            </a>
+                            </Link>
                             <div className="add-box">
                                 <button type='button' className="add" onClick={() => dispatch(addToCart(product))}>
                                     <img src="img/cart-add.svg" alt="cart" className="cart" />
@@ -48,7 +49,7 @@ const ProductsProducts = ({ checkboxes }) => {
                                 Загрузка...
                             </div >) :
                             <div key={product.id} className="item">
-                                <a href="../homework2/single-page.html" className="item-link">
+                                <Link to={"/single-page"} className="item-link">
                                     <div className="item-link__img">
                                         <img className="item-img" src={product.image} alt="item" />
                                     </div>
@@ -56,7 +57,7 @@ const ProductsProducts = ({ checkboxes }) => {
                                         <p className="description">{product.name}</p>
                                         <p className="item-price">${product.price}</p>
                                     </div>
-                                </a>
+                                </Link>
                                 <div className="add-box">
                                     <a href="222222" className="add">
                                         <img src="img/cart-add.svg" alt="cart" className="cart" />
