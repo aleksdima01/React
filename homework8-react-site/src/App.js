@@ -29,16 +29,16 @@ function App() {
           Главная
         </NavLink>
         <NavLink to="/checkout">
-          О нас
+          Checkout
         </NavLink>
         <NavLink to="/single-page">
-          Текст
+          SinglePage
         </NavLink>
         <NavLink to="/products">
-          Пункты
+          Products
         </NavLink>
         <NavLink to="/cart">
-          Страница товаров
+          Cart
         </NavLink>
       </nav>
       <Routes>

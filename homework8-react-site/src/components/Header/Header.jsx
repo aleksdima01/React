@@ -4,6 +4,7 @@ import { ReactComponent as CartSvg } from "../../svg/cart.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import ProductsInCart from '../ProductsInCart/ProductsInCart'
 
 const Header = () => {
     return (
@@ -60,59 +61,8 @@ const Header = () => {
                                 <CartSvg />
                             </Link>
                             <div className="cart-menu__mega-box">
-                                <div className="cart-menu__menu-item">
-                                    <a href="../homework2/single-page.html" className="cart-menu__menu-item__img">
-                                        <img src="./img/cart-menu-man.png" alt="cart-menu-man" />
-                                    </a>
-                                    <a href="../homework2/single-page.html" className="cart-menu__menu-item__text-a">
-                                        <div className="cart-menu__menu-item__text">
-                                            <h3 className="cart-menu__menu-item__h3">Rebox Zane</h3>
-                                            {/* <p>
-                                                <i className="fa fa-star" style="color: #e4af48;font-size: 12px;line-height: 1.2;
-                                font-weight: 400;text-transform: uppercase;"></i>
-                                                <i className="fa fa-star" style="color: #e4af48;font-size: 12px;line-height: 1.2;
-                                font-weight: 400;text-transform: uppercase;"></i>
-                                                <i className="fa fa-star" style="color: #e4af48;font-size: 12px;line-height: 1.2;
-                                font-weight: 400;text-transform: uppercase;"></i>
-                                                <i className="fa fa-star" style="color: #e4af48;font-size: 12px;line-height: 1.2;
-                                font-weight: 400;text-transform: uppercase;"></i>
-                                                <i className="fa fa-star" style="color: #e4af48;font-size: 12px;line-height: 1.2;
-                                font-weight: 400;text-transform: uppercase;"></i>
-                                            </p> */}
-                                            <p className="cart-menu__menu-item__p">1 <span>x</span> $250</p>
-                                        </div>
-                                    </a>
-                                    {/* <a href="#"> <i className="fa fa-times-circle"
-                                        style="color:#c0c0c0;font-size: 16px;font-weight: 400;line-height: 1.2;margin-left: 55px;"></i></a> */}
-                                </div>
-                                <div className="cart-menu__menu-item__border"></div>
-                                <div className="cart-menu__menu-item">
-                                    <a href="../homework2/single-page.html" className="cart-menu__menu-item__img">
-                                        <img src="./img/cart_menu_woman.png" alt="cart-menu-man" />
-                                    </a>
-                                    <a href="../homework2/single-page.html" className="cart-menu__menu-item__text-a">
-                                        <div className="cart-menu__menu-item__text">
-                                            <h3 className="cart-menu__menu-item__h3">Rebox Zane</h3>
-                                            {/* <p>
-                                                <i className="fa fa-star" style="color: #e4af48;font-size: 12px;line-height: 1.2;
-                                font-weight: 400;text-transform: uppercase;"></i>
-                                                <i className="fa fa-star" style="color: #e4af48;font-size: 12px;line-height: 1.2;
-                                font-weight: 400;text-transform: uppercase;"></i>
-                                                <i className="fa fa-star" style="color: #e4af48;font-size: 12px;line-height: 1.2;
-                                font-weight: 400;text-transform: uppercase;"></i>
-                                                <i className="fa fa-star" style="color: #e4af48;font-size: 12px;line-height: 1.2;
-                                font-weight: 400;text-transform: uppercase;"></i>
-                                                <i className="fa fa-star" style="color: #e4af48;font-size: 12px;line-height: 1.2;
-                                font-weight: 400;text-transform: uppercase;"></i>
-                                            </p> */}
-                                            <p className="cart-menu__menu-item__p">1 <span>x</span> $250</p>
-                                        </div>
-                                    </a>
-                                    {/* <a href="#"> <i className="fa fa-times-circle"
-                                        style="color:#c0c0c0;font-size: 16px;font-weight: 400;line-height: 1.2;margin-left: 55px;"></i></a> */}
-                                </div>
-                                <div className="cart-menu__menu-item__border"></div>
-                                <h2 className="cart-menu__mega-box__h2">TOTAL <span>$500.00</span></h2>
+                                <ProductsInCart />
+
                                 <Link to={"/checkout"} className="cart-menu__mega-box__a">CHECKOUT</Link>
                                 <Link to={"/cart"} className=" cart-menu__mega-box__a cart-menu__mega-box__a_cart">Go
                                     to cart</Link>

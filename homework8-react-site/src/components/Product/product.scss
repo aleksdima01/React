@@ -961,6 +961,7 @@ datalist option {
     justify-content: center;
     pointer-events: all;
     cursor: pointer;
+    background-color: unset;
 
     &__icons {
         display: flex;

@@ -253,6 +253,24 @@ input[type="checkbox"]:checked~.top-menu__box {
         border-radius: 3px;
     }
 
+    .stars path {
+        fill: #e4af48;
+    }
+
+    .delete-icon {
+        border: 1px solid rgba(0, 0, 0, 0.01);
+        border-radius: 100%;
+    }
+
+    .delete-icon path {
+        fill: #c0c0c0;
+    }
+
+    .delete-icon:hover {
+        border: 1px solid red;
+        border-radius: 100%;
+    }
+
     .cart-menu {
         position: relative;
         list-style-type: none;

@@ -24,9 +24,6 @@ const productsSlice = createSlice({
     initialState,
     name: "products",
     reducers: {
-        // setProductsList: (state, action) => {
-        //     state.productsList = action.payload;
-        // }
     },
     extraReducers: (builder) => {
         builder

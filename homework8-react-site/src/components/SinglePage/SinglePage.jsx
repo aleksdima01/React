@@ -68,11 +68,11 @@ const SinglePage = () => {
                 </section>
 
                 <section>
-                    <div className="cards-section">
+                    <div className="cards-section-single">
                         <h3 className="item-title">you may like also</h3>
                         <div className="item-box">
                             <div className="item">
-                                <a href="./single-page.html" className="item-link">
+                                <Link to={"/single-page"} className="item-link">
                                     <div className="item-link__img">
                                         <img className="item-img" src="img/cart1.png" alt="item" />
                                     </div>
@@ -80,12 +80,12 @@ const SinglePage = () => {
                                         <p className="description">Mango People T-shirt</p>
                                         <p className="item-price">$52.00</p>
                                     </div>
-                                </a>
+                                </Link>
                                 <div className="add-box">
-                                    <a href="222222" className="add">
+                                    <button type='button' className="add" >
                                         <img src="img/cart-add.svg" alt="cart" className="cart" />
                                         <p className="add-txt">Add to Cart</p>
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                             <div className="item">
