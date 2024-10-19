@@ -20,8 +20,6 @@ function App() {
     dispatch(fetchProducts())
   }, [dispatch]);
 
-
-
   return (
     <BrowserRouter>
       <Routes>

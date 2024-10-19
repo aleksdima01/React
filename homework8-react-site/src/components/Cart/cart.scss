@@ -233,11 +233,26 @@ input[type="checkbox"]:checked~.top-menu__box {
     height: 51px;
 }
 
+.delete-icon {
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    border-radius: 100%;
+}
+
+
+.delete-icon:hover {
+    border: 1px solid red;
+    border-radius: 100%;
+}
+
 .right-header-block {
     display: flex;
     gap: 13px;
     margin-right: 231px;
     align-items: center;
+
+    .delete-icon path {
+        fill: #c0c0c0;
+    }
 
     .button-right {
         width: 130px;
@@ -257,19 +272,6 @@ input[type="checkbox"]:checked~.top-menu__box {
         fill: #e4af48;
     }
 
-    .delete-icon {
-        border: 1px solid rgba(0, 0, 0, 0.01);
-        border-radius: 100%;
-    }
-
-    .delete-icon path {
-        fill: #c0c0c0;
-    }
-
-    .delete-icon:hover {
-        border: 1px solid red;
-        border-radius: 100%;
-    }
 
     .cart-menu {
         position: relative;
@@ -467,8 +469,14 @@ input[type="checkbox"] {
         align-items: center;
         justify-self: start;
 
+        &__nothing-in-cart {
+            font-size: 20px;
+        }
+
         & img {
             border: 1px solid #ffffff;
+            width: 105px;
+            height: 125px;
         }
 
 
@@ -513,7 +521,7 @@ input[type="checkbox"] {
 
     &__p {
         font-family: Lato;
-        font-size: 13px;
+        font-size: 18px;
         line-height: 20px;
         font-weight: 400;
         color: #656565;
@@ -529,7 +537,7 @@ input[type="checkbox"] {
         background-color: #ffffff;
         border: 1px solid #eaeaea;
         font-family: Lato;
-        font-size: 13px;
+        font-size: 18px;
         line-height: 20px;
         font-weight: 400;
         color: #656565;

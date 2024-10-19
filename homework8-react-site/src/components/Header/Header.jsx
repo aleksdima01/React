@@ -21,7 +21,7 @@ const Header = () => {
                             <div className="top-menu">
                                 <ul className="top-menu__ul">
                                     <li className="top-menu__li">
-                                        <label for="psbtn245" className="top-menu__link">
+                                        <label htmlFor="psbtn245" className="top-menu__link">
                                             Browse<FontAwesomeIcon icon={faCaretDown} style={{ color: "#838383", marginLeft: "8px", fontSize: "14px" }} />
                                         </label>
                                         <input type="checkbox" id="psbtn245" />

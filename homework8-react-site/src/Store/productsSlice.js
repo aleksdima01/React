@@ -13,7 +13,8 @@ export const fetchProducts = createAsyncThunk('products/fetchProducts',
                 throw new Error({ message: response.status });
             }
             const data = await response.json();
-            return data  //попадет в payload
+            return data
+            //попадет в payload
         } catch (error) {
             return thunkApi.rejectWithValue(error.message)
         }

@@ -113,7 +113,7 @@ const Product = () => {
                     <div className="left-menu">
                         <ul className="left-menu__ul">
                             <li className="left-menu__li">
-                                <label for="psbtn1" className="left-menu__link">Category</label>
+                                <label htmlFor="psbtn1" className="left-menu__link">Category</label>
                                 <input type="checkbox" id="psbtn1" />
                                 <div className="left-menu__box">
                                     <a href="#" className="left-menu__box__link">Accesories</a>
@@ -132,7 +132,7 @@ const Product = () => {
                                 </div>
                             </li>
                             <li className="left-menu__li">
-                                <label for="psbtn2" className="left-menu__link">Brand</label>
+                                <label htmlFor="psbtn2" className="left-menu__link">Brand</label>
                                 <input type="checkbox" id="psbtn2" />
                                 <div className="left-menu__box">
                                     <a href="#" className="left-menu__box__link">Accesories</a>
@@ -149,7 +149,7 @@ const Product = () => {
                                 </div>
                             </li>
                             <li className="left-menu__li">
-                                <label for="psbtn3" className="left-menu__link">Designer</label>
+                                <label htmlFor="psbtn3" className="left-menu__link">Designer</label>
                                 <input type="checkbox" id="psbtn3" />
                                 <div className="left-menu__box">
                                     <a href="#" className="left-menu__box__link">Accesories</a>
@@ -185,25 +185,25 @@ const Product = () => {
                             <h2 className="trending-now__h2">Size</h2>
                             <input className="size__check" type="checkbox" id="0" name="XXS"
                                 checked={checkbox0} onChange={(e) => handleCheckbox0(e)} />
-                            <label className="size__checkbox" for="0">XXS</label>
+                            <label className="size__checkbox" htmlFor="0">XXS</label>
                             <input className="size__check" type="checkbox" id="1" name="XS"
                                 checked={checkbox1} onChange={(e) => handleCheckbox1(e)} />
-                            <label className="size__checkbox" for="1">XS</label>
+                            <label className="size__checkbox" htmlFor="1">XS</label>
                             <input className="size__check" type="checkbox" id="2" name="S"
                                 checked={checkbox2} onChange={(e) => handleCheckbox2(e)} />
-                            <label className="size__checkbox" for="2">S</label>
+                            <label className="size__checkbox" htmlFor="2">S</label>
                             <input className="size__check" type="checkbox" id="3" name="M"
                                 checked={checkbox3} onChange={(e) => handleCheckbox3(e)} />
-                            <label className="size__checkbox" for="3">M</label>
+                            <label className="size__checkbox" htmlFor="3">M</label>
                             <input className="size__check" type="checkbox" id="4" name="L"
                                 checked={checkbox4} onChange={(e) => handleCheckbox4(e)} />
-                            <label className="size__checkbox" for="4">L</label>
+                            <label className="size__checkbox" htmlFor="4">L</label>
                             <input className="size__check" type="checkbox" id="5" name="XL"
                                 checked={checkbox5} onChange={(e) => handleCheckbox5(e)} />
-                            <label className="size__checkbox" for="5">XL</label>
+                            <label className="size__checkbox" htmlFor="5">XL</label>
                             <input className="size__check" type="checkbox" id="6" name="XXL"
                                 checked={checkbox6} onChange={(e) => handleCheckbox6(e)} />
-                            <label className="size__checkbox" for="6">XXL</label>
+                            <label className="size__checkbox" htmlFor="6">XXL</label>
                         </div>
                         <div className="price">
                             <h2 className="trending-now__h2">Price</h2>

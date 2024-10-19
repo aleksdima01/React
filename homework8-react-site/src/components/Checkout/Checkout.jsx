@@ -17,16 +17,16 @@ const Checkout = () => {
             <nav className="new-arrivals">
                 <a href="#" className="new-arrivals__link">New Arrivals</a>
                 <ul className="ul-refs">
-                    <li className="ul-refs__li"><a className="ul-refs__a" href="../homework1/index.html">home</a></li>
-                    <li className="ul-refs__li"><a className="ul-refs__a" href="../homework3/product.html">man</a></li>
-                    <li className="ul-refs__li"><a className="ul-refs__a" href="../homework3/product.html">New Arrivals</a></li>
+                    <li className="ul-refs__li"><Link to={"/"} className="ul-refs__a">home</Link></li>
+                    <li className="ul-refs__li"><Link to={"/products"} className="ul-refs__a">man</Link></li>
+                    <li className="ul-refs__li"><Link to={"/products"} className="ul-refs__a">New Arrivals</Link></li>
                 </ul>
             </nav>
             <nav className="left-menu-nav-checkout">
                 <div className="checkout-left-menu">
                     <ul className="checkout-left-menu__ul">
                         <li className="checkout-left-menu__li">
-                            <label for="psbtn1" className="checkout-left-menu__link">01.&nbsp;&nbsp;Shipping Adress</label>
+                            <label htmlFor="psbtn1" className="checkout-left-menu__link">01.&nbsp;&nbsp;Shipping Adress</label>
                             <input type="checkbox" id="psbtn1" />
                             <div className="checkout-left-menu__box">
                                 <div className="checkout-left-menu__box__item">
@@ -35,11 +35,11 @@ const Checkout = () => {
                                     <p className="checkout-left-menu__box__item__check">
                                         <input className="checkout-left-menu__box__item__input" type="radio" name="check" id="checkout"
                                             checked />
-                                        <label className="checkout-left-menu__box__item__checkout" for="checkout">checkout as guest</label>
+                                        <label className="checkout-left-menu__box__item__checkout" htmlFor="checkout">checkout as guest</label>
                                     </p>
                                     <p className="checkout-left-menu__box__item__check checkout-left-menu__box__item__check_pb">
                                         <input className="checkout-left-menu__box__item__input" type="radio" name="check" id="register" />
-                                        <label className="checkout-left-menu__box__item__checkout" for="register">register</label>
+                                        <label className="checkout-left-menu__box__item__checkout" htmlFor="register">register</label>
                                     </p>
                                     <h2 className="checkout-left-menu__box__item__h2">register and save time!</h2>
                                     <p className="checkout-left-menu__box__item__p">Register with us for future convenience</p>
@@ -73,7 +73,7 @@ const Checkout = () => {
                             <div className="border"></div>
                         </li>
                         <li className="checkout-left-menu__li">
-                            <label for="psbtn2" className="checkout-left-menu__link">02.&nbsp;&nbsp;BILLING INFORMATION
+                            <label htmlFor="psbtn2" className="checkout-left-menu__link">02.&nbsp;&nbsp;BILLING INFORMATION
                             </label>
                             <input type="checkbox" id="psbtn2" />
                             <div className="checkout-left-menu__box">
@@ -97,7 +97,7 @@ const Checkout = () => {
                             <div className="border"></div>
                         </li>
                         <li className="checkout-left-menu__li">
-                            <label for="psbtn3" className="checkout-left-menu__link"> 03.&nbsp;&nbsp;SHIPPING INFORMATION</label>
+                            <label htmlFor="psbtn3" className="checkout-left-menu__link"> 03.&nbsp;&nbsp;SHIPPING INFORMATION</label>
                             <input type="checkbox" id="psbtn3" />
                             <div className="checkout-left-menu__box">
                                 <p className="lorem_p"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam at earum
@@ -120,7 +120,7 @@ const Checkout = () => {
                             <div className="border"></div>
                         </li>
                         <li className="checkout-left-menu__li">
-                            <label for="psbtn4" className="checkout-left-menu__link"> 04.&nbsp;&nbsp;SHIPPING METHOD</label>
+                            <label htmlFor="psbtn4" className="checkout-left-menu__link"> 04.&nbsp;&nbsp;SHIPPING METHOD</label>
                             <input type="checkbox" id="psbtn4" />
                             <div className="checkout-left-menu__box">
                                 <p className="lorem_p"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam at earum
@@ -143,7 +143,7 @@ const Checkout = () => {
                             <div className="border"></div>
                         </li>
                         <li className="checkout-left-menu__li">
-                            <label for="psbtn5" className="checkout-left-menu__link">05.&nbsp;&nbsp;PAYMENT METHOD</label>
+                            <label htmlFor="psbtn5" className="checkout-left-menu__link">05.&nbsp;&nbsp;PAYMENT METHOD</label>
                             <input type="checkbox" id="psbtn5" />
                             <div className="checkout-left-menu__box">
                                 <p className="lorem_p"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam at earum
@@ -166,7 +166,7 @@ const Checkout = () => {
                             <div className="border"></div>
                         </li>
                         <li className="checkout-left-menu__li">
-                            <label for="psbtn6" className="checkout-left-menu__link">06.&nbsp;&nbsp;ORDER REVIEW</label>
+                            <label htmlFor="psbtn6" className="checkout-left-menu__link">06.&nbsp;&nbsp;ORDER REVIEW</label>
                             <input type="checkbox" id="psbtn6" />
                             <div className="checkout-left-menu__box">
                                 <p className="lorem_p"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam at earum

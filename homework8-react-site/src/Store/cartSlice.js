@@ -13,7 +13,6 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         addToCart: (state, action) => {
-            console.log(action.payload)
             const index = state.cart.findIndex(
                 (product) => product.id === action.payload.id)
             if (index !== -1) {
@@ -32,9 +31,21 @@ const cartSlice = createSlice({
             state.cart = products;
             saveToLocalStorage(state.cart);
         },
+        updateCartCount: (state, action) => {
+            const index = state.cart.findIndex(
+                (product) => product.id === action.payload[1].id)
+            if (index !== -1) {
+                state.cart[index].count = action.payload[0]
+            }
+            saveToLocalStorage(state.cart);
+        },
+        deleteAllCart: (state, action) => {
+            state.cart = [];
+            saveToLocalStorage(state.cart);
+        },
     },
 });
 
-export const { addToCart, deleteFromCart } =
+export const { addToCart, deleteFromCart, updateCartCount, deleteAllCart } =
     cartSlice.actions;
 export default cartSlice.reducer;

@@ -7,8 +7,8 @@ import { ReactComponent as Cart } from "../../svg/cart.svg"
 import { ReactComponent as SubscrInfo } from "../../svg/subscr_info.svg"
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
-import MainProducts from '../MainProducts/MainProducts'
 import { Link } from 'react-router-dom'
+import RandomProductCount from '../RandomProductCount/RandomProductCount'
 
 const SinglePage = () => {
     return (
@@ -49,7 +49,7 @@ const SinglePage = () => {
                     <div className="add-to-cart-section__choosers">
                         <div className="add-to-cart-section__choosers__pos">
                             <p className="add-to-cart-section__choosers__pos__text">CHOOSE COLOR</p>
-                            <input className="add-to-cart-section__choosers__pos__input" type="color" value="#DC143C" />
+                            <input className="add-to-cart-section__choosers__pos__input" type="color" defaultValue="#DC143C" />
                         </div>
                         <div className="add-to-cart-section__choosers__pos">
                             <p className="add-to-cart-section__choosers__pos__text">CHOOSE SIZE</p>
@@ -57,7 +57,7 @@ const SinglePage = () => {
                         </div>
                         <div className="add-to-cart-section__choosers__pos">
                             <p className="add-to-cart-section__choosers__pos__text">QUANTITY</p>
-                            <input className="add-to-cart-section__choosers__pos__input" type="number" min="1" value="1" />
+                            <input className="add-to-cart-section__choosers__pos__input" type="number" min="1" defaultValue="1" />
                         </div>
                     </div>
                     <a href="#">
@@ -72,7 +72,7 @@ const SinglePage = () => {
                     <div className="cards-section-single">
                         <h3 className="item-title">you may like also</h3>
                         <div className="products">
-                            <MainProducts count={4} />
+                            <RandomProductCount count={4} />
                         </div>
                     </div>
                 </section>
