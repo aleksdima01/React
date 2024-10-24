@@ -26,9 +26,7 @@ function App() {
       {users.length ? <ul>
         {
           users.map(user => (
-            <>
-              <li className="li_hover" key={user.id} onClick={(e) => handleShowInfo(user.id)} >{user.name}</li>
-            </>
+            <li className="li_hover" key={user.id} onClick={(e) => handleShowInfo(user.id)} >{user.name}</li>
           ))
         }
         <ShowUserInfo />
